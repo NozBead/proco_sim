@@ -7,7 +7,7 @@ vpath %.h src/
 proco_sim : micro_instruction.o disassembly.o instruction.o debug.o main.o
 	$(CC) $(CFLAGS) -o $@ $^
 
-%.o : %.c %.h
+%.o : %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 .PHONY: clean
